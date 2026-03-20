@@ -4,7 +4,7 @@ using labs_RPM.Services;
 
 namespace labs_RPM
 {
-    internal class Program
+    internal class Program // Лабораторная работа 4
     {
         static void Main(string[] args)
         {
