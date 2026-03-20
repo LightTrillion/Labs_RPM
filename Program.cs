@@ -1,6 +1,8 @@
-﻿using labs_RPM.Core;
-using labs_RPM.Adapters;
-using labs_RPM.Services;
+﻿using labs_RPM.Bridge;
+using labs_RPM.Core;
+using labs_RPM.Decorator;
+using labs_RPM.Flyweight;
+using labs_RPM.Proxy;
 
 namespace labs_RPM
 {
@@ -8,21 +10,30 @@ namespace labs_RPM
     {
         static void Main(string[] args)
         {
-            // 1. Строим структуру (Composite)
-            var root = new FolderItem("MyDocuments");
-            var work = new FolderItem("Work");
-            work.Add(new FileItem("Report.pdf", 1024));
-            work.Add(new FileItem("Data.csv", 2048));
+            // 1. Тест Bridge
+            Console.WriteLine("--- Bridge Pattern ---");
+            Shape circle = new Circle(new VectorRenderer());
+            circle.Draw();
 
-            root.Add(work);
-            root.Add(new FileItem("Photo.jpg", 5000));
+            // 2. Тест Decorator
+            Console.WriteLine("\n--- Decorator Pattern ---");
+            Shape decoratedCircle = new ShadowDecorator(new BorderDecorator(circle));
+            decoratedCircle.Draw();
 
-            // 2. Отображаем
-            root.Display(0);
+            // 3. Тест Proxy
+            Console.WriteLine("\n--- Proxy Pattern ---");
+            IImage image = new ProxyImage("high_res_photo.png");
+            Console.WriteLine("Image object created. Not loaded yet.");
+            image.Display(); // Загрузка произойдет только здесь
 
-            // 3. Используем упрощенный интерфейс (Facade + Adapter)
-            var facade = new FileSystemFacade(new LocalStorageAdapter(), new CloudStorageAdapter());
-            facade.BackupFolder(root);
+            // 4. Тест Flyweight
+            Console.WriteLine("\n--- Flyweight Pattern ---");
+            var factory = new CharacterFactory();
+            var char1 = factory.GetCharacter('A', "Arial");
+            var char2 = factory.GetCharacter('A', "Arial");
+            char1.Display(12);
+            char2.Display(14);
+            Console.WriteLine($"Are same objects? {ReferenceEquals(char1, char2)}");
         }
     }
 }
