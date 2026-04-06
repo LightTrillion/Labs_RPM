@@ -1,28 +1,21 @@
-﻿using labs_RPM.Core;
-using labs_RPM.Adapters;
-using labs_RPM.Services;
-
-namespace labs_RPM
+﻿namespace labs_RPM
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            // 1. Строим структуру (Composite)
-            var root = new FolderItem("MyDocuments");
-            var work = new FolderItem("Work");
-            work.Add(new FileItem("Report.pdf", 1024));
-            work.Add(new FileItem("Data.csv", 2048));
+            var monitor = new SystemMonitor();
 
-            root.Add(work);
-            root.Add(new FileItem("Photo.jpg", 5000));
+            // Создаем подписчиков с разными стратегиями форматирования
+            var admin = new ConsoleSubscriber(new TextFormatter());
+            var logger = new FileSubscriber(new JsonFormatter());
 
-            // 2. Отображаем
-            root.Display(0);
+            monitor.Subscribe(admin);
+            monitor.Subscribe(logger);
 
-            // 3. Используем упрощенный интерфейс (Facade + Adapter)
-            var facade = new FileSystemFacade(new LocalStorageAdapter(), new CloudStorageAdapter());
-            facade.BackupFolder(root);
+            // Имитация критических событий
+            monitor.Notify("CPU", "Загрузка 95%!");
+            monitor.Notify("Network", "Потеря пакетов 20%");
         }
     }
 }
