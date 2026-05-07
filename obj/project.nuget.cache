@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "fGb5VPfzl/4=",
+  "dgSpecHash": "fzDyfZGX94MHJOmsZqEG7mV/WwFHzzpxMOV0XYb60TkO/Pe8OGj4jTMsNtJc92Vef8XuhDENTsb8htkpyWrCPA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Vorobevev\\Source\\Repos\\labs_RPM\\laba_9_MVVM.csproj",
+  "projectFilePath": "C:\\Users\\moder\\Source\\Repos\\labs_RPM_2\\laba_9_MVVM.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Vorobevev\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\10.0.7\\microsoft.extensions.dependencyinjection.10.0.7.nupkg.sha512",
-    "C:\\Users\\Vorobevev\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.7\\microsoft.extensions.dependencyinjection.abstractions.10.0.7.nupkg.sha512"
+    "C:\\Users\\moder\\.nuget\\packages\\communitytoolkit.mvvm\\8.4.2\\communitytoolkit.mvvm.8.4.2.nupkg.sha512",
+    "C:\\Users\\moder\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\10.0.7\\microsoft.extensions.dependencyinjection.10.0.7.nupkg.sha512",
+    "C:\\Users\\moder\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.7\\microsoft.extensions.dependencyinjection.abstractions.10.0.7.nupkg.sha512"
   ],
   "logs": []
 }

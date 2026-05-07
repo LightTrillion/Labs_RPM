@@ -4,31 +4,18 @@ using System.Windows.Input;
 namespace laba_9_MVVM.ViewModels
 {
     // Обычная команда
-    public class RelayCommand(Action execute, Func<bool>? canExecute = null) : ICommand
+    public class RelayCommand : ICommand
     {
-        private readonly Action _execute = execute ?? throw new ArgumentNullException(nameof(execute));
-        private readonly Func<bool>? _canExecute = canExecute;
-
-        public bool CanExecute(object? parameter) => _canExecute?.Invoke() ?? true;
-        public void Execute(object? parameter) => _execute();
-
-        public event EventHandler? CanExecuteChanged
+        private readonly Action<object> _execute;
+        private readonly Func<object, bool> _canExecute;
+        public RelayCommand(Action<object> execute, Func<object, bool> canExecute = null)
         {
-            add => CommandManager.RequerySuggested += value;
-            remove => CommandManager.RequerySuggested -= value;
+            _execute = execute;
+            _canExecute = canExecute;
         }
-    }
-
-    // Обобщённая команда
-    public class RelayCommand<T>(Action<T?> execute, Predicate<T?>? canExecute = null) : ICommand
-    {
-        private readonly Action<T?> _execute = execute ?? throw new ArgumentNullException(nameof(execute));
-        private readonly Predicate<T?>? _canExecute = canExecute;
-
-        public bool CanExecute(object? parameter) => _canExecute?.Invoke((T?)parameter) ?? true;
-        public void Execute(object? parameter) => _execute((T?)parameter);
-
-        public event EventHandler? CanExecuteChanged
+        public bool CanExecute(object parameter) => _canExecute == null || _canExecute(parameter);
+        public void Execute(object parameter) => _execute(parameter);
+        public event EventHandler CanExecuteChanged
         {
             add => CommandManager.RequerySuggested += value;
             remove => CommandManager.RequerySuggested -= value;

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\moder\Source\Repos\laba_9_MVVM\obj\Debug\net8.0-windows\
+C:\Users\moder\Source\Repos\labs_RPM_2\obj\Debug\net8.0-windows\
 laba_9_MVVM
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\moder\Source\Repos\laba_9_MVVM\App.xaml
-1-1644662438
+C:\Users\moder\Source\Repos\labs_RPM_2\App.xaml
+32082992400
 
-9672806232
-198-294894759
-Views\MainWindow.xaml;
+16-974169254
+201479004267
+MainWindow.xaml;Views\AboutView.xaml;Views\ContactsListView.xaml;
 
 False
 
