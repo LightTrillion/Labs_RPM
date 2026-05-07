@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\moder\source\repos\laba_9_MVVM\obj\Debug\net8.0-windows\
+C:\Users\Vorobevev\Source\Repos\labs_RPM\obj\Debug\net8.0-windows\
 laba_9_MVVM
 none
 false
-TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\moder\source\repos\laba_9_MVVM\App.xaml
+TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
+C:\Users\Vorobevev\Source\Repos\labs_RPM\App.xaml
 1-1644662438
 
-10-2099451736
-198-294894759
+1299500675
+200-2077989600
 Views\MainWindow.xaml;
 
 False

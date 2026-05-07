@@ -10,7 +10,6 @@ namespace laba_9_MVVM.ViewModels
         private readonly Func<bool>? _canExecute = canExecute;
 
         public bool CanExecute(object? parameter) => _canExecute?.Invoke() ?? true;
-
         public void Execute(object? parameter) => _execute();
 
         public event EventHandler? CanExecuteChanged
@@ -20,14 +19,13 @@ namespace laba_9_MVVM.ViewModels
         }
     }
 
-    // Обобщенная команда
+    // Обобщённая команда
     public class RelayCommand<T>(Action<T?> execute, Predicate<T?>? canExecute = null) : ICommand
     {
         private readonly Action<T?> _execute = execute ?? throw new ArgumentNullException(nameof(execute));
         private readonly Predicate<T?>? _canExecute = canExecute;
 
         public bool CanExecute(object? parameter) => _canExecute?.Invoke((T?)parameter) ?? true;
-
         public void Execute(object? parameter) => _execute((T?)parameter);
 
         public event EventHandler? CanExecuteChanged

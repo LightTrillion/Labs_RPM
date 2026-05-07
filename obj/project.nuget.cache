@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "YWOJel7SPHrLd0HXhvqwMMPa8WLt15ad+yje4NxKEQM82/89mc1l9toei9xg5s7BUDUl04gAt6NaFbOd2sg+ww==",
+  "dgSpecHash": "fGb5VPfzl/4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\moder\\source\\repos\\laba_9_MVVM\\laba_9_MVVM.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Vorobevev\\Source\\Repos\\labs_RPM\\laba_9_MVVM.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Vorobevev\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\10.0.7\\microsoft.extensions.dependencyinjection.10.0.7.nupkg.sha512",
+    "C:\\Users\\Vorobevev\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.7\\microsoft.extensions.dependencyinjection.abstractions.10.0.7.nupkg.sha512"
+  ],
   "logs": []
 }

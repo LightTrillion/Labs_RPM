@@ -21,10 +21,9 @@
             <Button Content="Удалить" Width="100"
                     Command="{Binding DeleteCommand}"/>
         </StackPanel>
-        <!-- Список контактов -->
         <DataGrid Grid.Row="3" AutoGenerateColumns="False" IsReadOnly="True"
-                ItemsSource="{Binding Contacts}"
-                SelectedItem="{Binding SelectedContact, Mode=TwoWay}">
+                  ItemsSource="{Binding Contacts}"
+                  SelectedItem="{Binding SelectedContact, Mode=TwoWay}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Имя" Binding="{Binding Name}"/>
                 <DataGridTextColumn Header="Телефон" Binding="{Binding Phone}"/>

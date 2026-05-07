@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Vorobevev\\Source\\Repos\\labs_RPM\\laba_9_MVVM.csproj": {}
+    "C:\\Users\\Vorobevev\\Source\\Repos\\labs_RPM\\labs_RPM.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Vorobevev\\Source\\Repos\\labs_RPM\\laba_9_MVVM.csproj": {
+    "C:\\Users\\Vorobevev\\Source\\Repos\\labs_RPM\\labs_RPM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vorobevev\\Source\\Repos\\labs_RPM\\laba_9_MVVM.csproj",
-        "projectName": "laba_9_MVVM",
-        "projectPath": "C:\\Users\\Vorobevev\\Source\\Repos\\labs_RPM\\laba_9_MVVM.csproj",
+        "projectUniqueName": "C:\\Users\\Vorobevev\\Source\\Repos\\labs_RPM\\labs_RPM.csproj",
+        "projectName": "labs_RPM",
+        "projectPath": "C:\\Users\\Vorobevev\\Source\\Repos\\labs_RPM\\labs_RPM.csproj",
         "packagesPath": "C:\\Users\\Vorobevev\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Vorobevev\\Source\\Repos\\labs_RPM\\obj\\",
         "projectStyle": "PackageReference",
@@ -22,7 +22,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0-windows"
+          "net8.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -30,8 +30,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0-windows7.0": {
-            "targetAlias": "net8.0-windows",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -48,14 +48,8 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0-windows7.0": {
-          "targetAlias": "net8.0-windows",
-          "dependencies": {
-            "Microsoft.Extensions.DependencyInjection": {
-              "target": "Package",
-              "version": "[10.0.7, )"
-            }
-          },
+        "net8.0": {
+          "targetAlias": "net8.0",
           "imports": [
             "net461",
             "net462",
@@ -70,9 +64,6 @@
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
-            },
-            "Microsoft.WindowsDesktop.App.WPF": {
-              "privateAssets": "none"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.309/PortableRuntimeIdentifierGraph.json"

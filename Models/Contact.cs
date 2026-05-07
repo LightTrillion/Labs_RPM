@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using laba_9_MVVM.ViewModels;
+﻿using laba_9_MVVM.ViewModels;
 
 namespace laba_9_MVVM.Models
 {
@@ -20,7 +15,6 @@ namespace laba_9_MVVM.Models
 
         public bool Validate()
         {
-
             bool isNameValid = !string.IsNullOrWhiteSpace(Name);
 
             bool isPhoneValid = !string.IsNullOrWhiteSpace(Phone) &&
